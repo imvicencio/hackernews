@@ -1,7 +1,7 @@
 
 # Go with GraphQl
 [![Build Status](https://app.travis-ci.com/imvicencio/hackernews.svg?branch=main)](https://app.travis-ci.com/imvicencio/hackernews)
-
+[![Go](https://github.com/imvicencio/hackernews/actions/workflows/go.yml/badge.svg)](https://github.com/imvicencio/hackernews/actions/workflows/go.yml)
 
 ## Installation
 
