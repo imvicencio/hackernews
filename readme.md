@@ -1,5 +1,7 @@
 
 # Go with GraphQl
+[![Build Status](https://app.travis-ci.com/imvicencio/hackernews.svg?branch=main)](https://app.travis-ci.com/imvicencio/hackernews)
+
 
 ## Installation
 
