@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  db:
+    image: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+     - MYSQL_ROOT_PASSWORD=dbpass
+     - MYSQL_USER=dbuser
+     - MYSQL_DATABASE=hackernews
+     - MYSQL_PASSWORD=dbpass
+     - MYSQL_ROOT_HOST=%
+    ports:
+      - "3306:3306" 
+  api:
+    build: .
+    container_name: api
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    restart: on-failure
+
