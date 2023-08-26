@@ -1,0 +1,15 @@
+go:
+  - 1.21.x  # Replace with your Go version
+  - master
+
+services:
+  - mysql
+
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS hackernews;'
+
+before_script:
+  - go get -t -v ./...
+  
+script:
+  - go test -v ./...  # Run tests in the current project
