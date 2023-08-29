@@ -23,7 +23,12 @@ func main() {
 	}
 
 	database.InitDB()
-	defer database.CloseDB()
+	defer func() {
+		err := database.CloseDB()
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
 	database.Migrate()
 
 	router := chi.NewRouter()
